@@ -1,0 +1,5 @@
+An APIListResult object is returned by calls to [APIRequest.query](APIRequest#query.md) that don't return a JSON object in the result (an array, instead). It is a subtype of the Python list type and is identical in almost all ways. See the [Python documentation](http://docs.python.org/library/stdtypes.html#sequence-types-str-unicode-list-tuple-buffer-xrange) for full documentation. APIListResult also includes a <var>response</var> member variable that includes HTTP response headers for debugging purposes.
+
+In general, there is no reason to ever need to create an APIListResult object (they're created automatically when needed), and they can, for all intents and purposes, be treated as a list.
+
+As of July 2010, this is rarely used, as only one API module is known to behave this way, the [OpenSearch](http://www.mediawiki.org/wiki/API:Other_services) module.
